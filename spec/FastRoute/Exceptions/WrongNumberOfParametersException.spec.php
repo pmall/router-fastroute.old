@@ -1,7 +1,7 @@
 <?php
 
-use Ellipse\Router\Adapter\Exceptions\RouterAdapterExceptionInterface;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\WrongNumberOfParametersException;
+use Ellipse\Router\Exceptions\RouterAdapterExceptionInterface;
+use Ellipse\Router\FastRoute\Exceptions\WrongNumberOfParametersException;
 
 describe('WrongNumberOfParametersException', function () {
 

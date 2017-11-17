@@ -1,43 +1,43 @@
 <?php declare(strict_types=1);
 
-namespace Ellipse\Router\Adapter\FastRoute;
+namespace Ellipse\Router\FastRoute;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-use Ellipse\Router\Adapter\RouterAdapterInterface;
+use Ellipse\Router\RouterAdapterInterface;
 
-use Ellipse\Router\Adapter\Handler;
-use Ellipse\Router\Adapter\Match;
+use Ellipse\Router\Handler;
+use Ellipse\Router\Match;
 
 class RouterAdapter implements RouterAdapterInterface
 {
     /**
      * The mapper.
      *
-     * @var \Ellipse\Router\Adapter\FastRoute\Mapper
+     * @var \Ellipse\Router\FastRoute\Mapper
      */
     private $mapper;
 
     /**
      * The matcher.
      *
-     * @var \Ellipse\Router\Adapter\FastRoute\Matcher
+     * @var \Ellipse\Router\FastRoute\Matcher
      */
     private $matcher;
 
     /**
      * The url generator.
      *
-     * @var \Ellipse\Router\Adapter\FastRoute\UrlGenerator
+     * @var \Ellipse\Router\FastRoute\UrlGenerator
      */
     private $generator;
 
     /**
      * Set up a router adapter with the given mapper, matcher and url generator.
      *
-     * @param \Ellipse\Router\Adapter\FastRoute\Mapper          $mapper
-     * @param \Ellipse\Router\Adapter\FastRoute\Matcher         $matcher
-     * @param \Ellipse\Router\Adapter\FastRoute\UrlGenerator    $generator
+     * @param \Ellipse\Router\FastRoute\Mapper          $mapper
+     * @param \Ellipse\Router\FastRoute\Matcher         $matcher
+     * @param \Ellipse\Router\FastRoute\UrlGenerator    $generator
      */
     public function __construct(Mapper $mapper, Matcher $matcher, UrlGenerator $generator)
     {

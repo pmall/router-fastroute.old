@@ -4,13 +4,13 @@ use function Eloquent\Phony\Kahlan\mock;
 
 use Psr\Http\Message\ServerRequestInterface;
 
-use Ellipse\Router\Adapter\Handler;
-use Ellipse\Router\Adapter\Match;
-use Ellipse\Router\Adapter\RouterAdapterInterface;
-use Ellipse\Router\Adapter\FastRoute\Mapper;
-use Ellipse\Router\Adapter\FastRoute\Matcher;
-use Ellipse\Router\Adapter\FastRoute\UrlGenerator;
-use Ellipse\Router\Adapter\FastRoute\RouterAdapter;
+use Ellipse\Router\Handler;
+use Ellipse\Router\Match;
+use Ellipse\Router\RouterAdapterInterface;
+use Ellipse\Router\FastRoute\Mapper;
+use Ellipse\Router\FastRoute\Matcher;
+use Ellipse\Router\FastRoute\UrlGenerator;
+use Ellipse\Router\FastRoute\RouterAdapter;
 
 describe('RouterAdapter', function () {
 

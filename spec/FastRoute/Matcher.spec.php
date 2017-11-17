@@ -7,13 +7,13 @@ use Psr\Http\Message\UriInterface;
 
 use FastRoute\Dispatcher;
 
-use Ellipse\Router\Adapter\Handler;
-use Ellipse\Router\Adapter\Match;
-use Ellipse\Router\Adapter\FastRoute\Route;
-use Ellipse\Router\Adapter\FastRoute\Mapper;
-use Ellipse\Router\Adapter\FastRoute\Matcher;
-use Ellipse\Router\Adapter\Exceptions\NotFoundException;
-use Ellipse\Router\Adapter\Exceptions\MethodNotAllowedException;
+use Ellipse\Router\Handler;
+use Ellipse\Router\Match;
+use Ellipse\Router\FastRoute\Route;
+use Ellipse\Router\FastRoute\Mapper;
+use Ellipse\Router\FastRoute\Matcher;
+use Ellipse\Router\Exceptions\NotFoundException;
+use Ellipse\Router\Exceptions\MethodNotAllowedException;
 
 describe('Matcher', function () {
 

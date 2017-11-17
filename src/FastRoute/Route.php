@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace Ellipse\Router\Adapter\FastRoute;
+namespace Ellipse\Router\FastRoute;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-use Ellipse\Router\Adapter\Handler;
+use Ellipse\Router\Handler;
 
 class Route
 {
@@ -19,15 +19,15 @@ class Route
     /**
      * The route handler.
      *
-     * @var \Ellipse\Router\Adapter\Handler
+     * @var \Ellipse\Router\Handler
      */
     private $handler;
 
     /**
      * Set up a route with the given name and handler.
      *
-     * @param string                            $name
-     * @param \Ellipse\Router\Adapter\Handler   $handler
+     * @param string                    $name
+     * @param \Ellipse\Router\Handler   $handler
      */
     public function __construct(string $name, Handler $handler)
     {

@@ -1,25 +1,25 @@
 <?php declare(strict_types=1);
 
-namespace Ellipse\Router\Adapter\FastRoute;
+namespace Ellipse\Router\FastRoute;
 
-use Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameAlreadyMappedException;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameNotMappedException;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\WrongNumberOfParametersException;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\WrongParameterFormatException;
+use Ellipse\Router\FastRoute\Exceptions\RouteNameAlreadyMappedException;
+use Ellipse\Router\FastRoute\Exceptions\RouteNameNotMappedException;
+use Ellipse\Router\FastRoute\Exceptions\WrongNumberOfParametersException;
+use Ellipse\Router\FastRoute\Exceptions\WrongParameterFormatException;
 
 class UrlGenerator
 {
     /**
      * The mapper.
      *
-     * @var \Ellipse\Router\Adapter\FastRoute\Mapper
+     * @var \Ellipse\Router\FastRoute\Mapper
      */
     private $mapper;
 
     /**
      * Build an url generator with the given mapper.
      *
-     * @param \Ellipse\Router\Adapter\FastRoute\Mapper $mapper
+     * @param \Ellipse\Router\FastRoute\Mapper $mapper
      */
     public function __construct(Mapper $mapper)
     {
@@ -53,7 +53,7 @@ class UrlGenerator
      * @param array     $data
      * @param array     $parameters
      * @return array
-     * @throws \Ellipse\Router\Adapter\FastRoute\Exceptions\WrongNumberOfParametersException
+     * @throws \Ellipse\Router\FastRoute\Exceptions\WrongNumberOfParametersException
      */
     private function getRouteMatchingParameters(string $name, array $data, array $parameters): array
     {
@@ -84,7 +84,7 @@ class UrlGenerator
      * @param array $route
      * @param array $parameters
      * @return string
-     * @throws \Ellipse\Router\Adapter\FastRoute\Exceptions\WrongParameterFormatException
+     * @throws \Ellipse\Router\FastRoute\Exceptions\WrongParameterFormatException
      */
     private function getUrl(array $route, array $parameters): string
     {

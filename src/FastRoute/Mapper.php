@@ -1,14 +1,14 @@
 <?php declare(strict_types=1);
 
-namespace Ellipse\Router\Adapter\FastRoute;
+namespace Ellipse\Router\FastRoute;
 
 use FastRoute\RouteParser;
 use FastRoute\DataGenerator;
 use FastRoute\RouteCollector;
 
-use Ellipse\Router\Adapter\Handler;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameNotMappedException;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameAlreadyMappedException;
+use Ellipse\Router\Handler;
+use Ellipse\Router\FastRoute\Exceptions\RouteNameNotMappedException;
+use Ellipse\Router\FastRoute\Exceptions\RouteNameAlreadyMappedException;
 
 class Mapper
 {
@@ -61,7 +61,7 @@ class Mapper
      *
      * @param string $name
      * @return array
-     * @throws \Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameNotMappedException
+     * @throws \Ellipse\Router\FastRoute\Exceptions\RouteNameNotMappedException
      */
     public function get(string $name): array
     {
@@ -90,12 +90,12 @@ class Mapper
     /**
      * Register a handler to the mapper.
      *
-     * @param string                            $name
-     * @param array                             $methods
-     * @param string                            $pattern
-     * @param \Ellipse\Router\Adapter\Handler   $handler
+     * @param string                    $name
+     * @param array                     $methods
+     * @param string                    $pattern
+     * @param \Ellipse\Router\Handler   $handler
      * @return mixed
-     * @throws \Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameAlreadyMappedException
+     * @throws \Ellipse\Router\FastRoute\Exceptions\RouteNameAlreadyMappedException
      */
     public function register(string $name, array $methods, string $pattern, Handler $handler)
     {

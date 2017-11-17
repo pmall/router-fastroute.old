@@ -6,11 +6,11 @@ use function Eloquent\Phony\Kahlan\anInstanceOf;
 use FastRoute\RouteParser;
 use FastRoute\RouteCollector;
 
-use Ellipse\Router\Adapter\Handler;
-use Ellipse\Router\Adapter\FastRoute\Route;
-use Ellipse\Router\Adapter\FastRoute\Mapper;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameAlreadyMappedException;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameNotMappedException;
+use Ellipse\Router\Handler;
+use Ellipse\Router\FastRoute\Route;
+use Ellipse\Router\FastRoute\Mapper;
+use Ellipse\Router\FastRoute\Exceptions\RouteNameAlreadyMappedException;
+use Ellipse\Router\FastRoute\Exceptions\RouteNameNotMappedException;
 
 describe('Mapper', function () {
 

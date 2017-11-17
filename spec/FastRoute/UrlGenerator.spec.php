@@ -4,10 +4,10 @@ use function Eloquent\Phony\Kahlan\mock;
 
 use FastRoute\RouteParser;
 
-use Ellipse\Router\Adapter\FastRoute\Mapper;
-use Ellipse\Router\Adapter\FastRoute\UrlGenerator;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\WrongNumberOfParametersException;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\WrongParameterFormatException;
+use Ellipse\Router\FastRoute\Mapper;
+use Ellipse\Router\FastRoute\UrlGenerator;
+use Ellipse\Router\FastRoute\Exceptions\WrongNumberOfParametersException;
+use Ellipse\Router\FastRoute\Exceptions\WrongParameterFormatException;
 
 describe('UrlGenerator', function () {
 

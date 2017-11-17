@@ -1,28 +1,28 @@
 <?php declare(strict_types=1);
 
-namespace Ellipse\Router\Adapter\FastRoute;
+namespace Ellipse\Router\FastRoute;
 
 use Psr\Http\Message\ServerRequestInterface;
 
 use FastRoute\Dispatcher;
 
-use Ellipse\Router\Adapter\Match;
-use Ellipse\Router\Adapter\Exceptions\NotFoundException;
-use Ellipse\Router\Adapter\Exceptions\MethodNotAllowedException;
+use Ellipse\Router\Match;
+use Ellipse\Router\Exceptions\NotFoundException;
+use Ellipse\Router\Exceptions\MethodNotAllowedException;
 
 class Matcher
 {
     /**
      * The mapper.
      *
-     * @var \Ellipse\Router\Adapter\FastRoute\Mapper
+     * @var \Ellipse\Router\FastRoute\Mapper
      */
     private $mapper;
 
     /**
      * Set up a matcher with the given mapper.
      *
-     * @param \Ellipse\Router\Adapter\FastRoute\Mapper $mapper
+     * @param \Ellipse\Router\FastRoute\Mapper $mapper
      */
     public function __construct(Mapper $mapper)
     {
@@ -33,9 +33,9 @@ class Matcher
      * Return the route matching the given request.
      *
      * @param \Psr\Http\Message\ServerRequestInterface $request
-     * @return \Ellipse\Router\Adapter\Match
-     * @throws \Ellipse\Router\Adapter\Exceptions\NotFoundException
-     * @throws \Ellipse\Router\Adapter\Exceptions\MethodNotAllowedException
+     * @return \Ellipse\Router\Match
+     * @throws \Ellipse\Router\Exceptions\NotFoundException
+     * @throws \Ellipse\Router\Exceptions\MethodNotAllowedException
      */
     public function match(ServerRequestInterface $request): Match
     {

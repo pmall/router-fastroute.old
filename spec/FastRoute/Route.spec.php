@@ -5,8 +5,8 @@ use function Eloquent\Phony\Kahlan\mock;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-use Ellipse\Router\Adapter\Handler;
-use Ellipse\Router\Adapter\FastRoute\Route;
+use Ellipse\Router\Handler;
+use Ellipse\Router\FastRoute\Route;
 
 describe('Route', function () {
 

@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace Ellipse\Router\Adapter\FastRoute\Exceptions;
+namespace Ellipse\Router\FastRoute\Exceptions;
 
 use RuntimeException;
 
-use Ellipse\Router\Adapter\Exceptions\RouterAdapterExceptionInterface;
+use Ellipse\Router\Exceptions\RouterAdapterExceptionInterface;
 
 class RouteNameNotMappedException extends RuntimeException implements RouterAdapterExceptionInterface
 {

@@ -1,7 +1,7 @@
 <?php
 
-use Ellipse\Router\Adapter\Exceptions\RouterAdapterExceptionInterface;
-use Ellipse\Router\Adapter\FastRoute\Exceptions\RouteNameAlreadyMappedException;
+use Ellipse\Router\Exceptions\RouterAdapterExceptionInterface;
+use Ellipse\Router\FastRoute\Exceptions\RouteNameAlreadyMappedException;
 
 describe('RouteNameAlreadyMappedException', function () {
 

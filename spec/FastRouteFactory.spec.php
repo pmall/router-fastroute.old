@@ -1,8 +1,8 @@
 <?php
 
-use Ellipse\Router\Adapter\RouteCollectionFactoryInterface;
-use Ellipse\Router\Adapter\RouteCollection;
-use Ellipse\Router\Adapter\FastRouteFactory;
+use Ellipse\Router\RouteCollectionFactoryInterface;
+use Ellipse\Router\RouteCollection;
+use Ellipse\Router\FastRouteFactory;
 
 describe('FastRouteFactory', function () {
 

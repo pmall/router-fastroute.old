@@ -1,15 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace Ellipse\Router\Adapter;
+namespace Ellipse\Router;
 
 use FastRoute\RouteParser;
 use FastRoute\DataGenerator;
 use FastRoute\RouteCollector;
 
-use Ellipse\Router\Adapter\FastRoute\Mapper;
-use Ellipse\Router\Adapter\FastRoute\Matcher;
-use Ellipse\Router\Adapter\FastRoute\UrlGenerator;
-use Ellipse\Router\Adapter\FastRoute\RouterAdapter;
+use Ellipse\Router\FastRoute\Mapper;
+use Ellipse\Router\FastRoute\Matcher;
+use Ellipse\Router\FastRoute\UrlGenerator;
+use Ellipse\Router\FastRoute\RouterAdapter;
 
 class FastRouteFactory implements RouteCollectionFactoryInterface
 {
