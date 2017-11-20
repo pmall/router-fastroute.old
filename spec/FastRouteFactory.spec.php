@@ -1,8 +1,7 @@
 <?php
 
-use Ellipse\Router\RouteCollectionFactoryInterface;
-use Ellipse\Router\RouteCollection;
 use Ellipse\Router\FastRouteFactory;
+use Ellipse\Router\FastRoute\RouterAdapter;
 
 describe('FastRouteFactory', function () {
 
@@ -12,19 +11,13 @@ describe('FastRouteFactory', function () {
 
     });
 
-    it('should implement RouteCollectionFactoryInterface', function () {
-
-        expect($this->factory)->toBeAnInstanceOf(RouteCollectionFactoryInterface::class);
-
-    });
-
     describe('->__invoke()', function () {
 
-        it('should return a new instance of RouteCollection', function () {
+        it('should return a new instance of RouterAdapter', function () {
 
-            $test = ($this->factory)([]);
+            $test = ($this->factory)();
 
-            expect($test)->toBeAnInstanceOf(RouteCollection::class);
+            expect($test)->toBeAnInstanceOf(RouterAdapter::class);
 
         });
 

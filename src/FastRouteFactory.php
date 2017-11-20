@@ -11,12 +11,14 @@ use Ellipse\Router\FastRoute\Matcher;
 use Ellipse\Router\FastRoute\UrlGenerator;
 use Ellipse\Router\FastRoute\RouterAdapter;
 
-class FastRouteFactory implements RouteCollectionFactoryInterface
+class FastRouteFactory
 {
     /**
-     * @inheritdoc
+     * Return a fast route adapter.
+     *
+     * @return \Ellipse\Router\RouterAdapterInterface
      */
-    public function __invoke(array $definitions): RouteCollection
+    public function __invoke(): RouterAdapterInterface
     {
         $parser = new RouteParser\Std;
         $generator = new DataGenerator\GroupCountBased;
@@ -27,10 +29,6 @@ class FastRouteFactory implements RouteCollectionFactoryInterface
         $matcher = new Matcher($mapper);
         $generator = new UrlGenerator($mapper);
 
-        $adapter = new RouterAdapter($mapper, $matcher, $generator);
-
-        $definition = new DefinitionCollection($definitions);
-
-        return new RouteCollection($adapter, $definition);
+        return new RouterAdapter($mapper, $matcher, $generator);
     }
 }
