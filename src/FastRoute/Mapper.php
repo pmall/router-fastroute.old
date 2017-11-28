@@ -94,10 +94,10 @@ class Mapper
      * @param array                     $methods
      * @param string                    $pattern
      * @param \Ellipse\Router\Handler   $handler
-     * @return mixed
+     * @return void
      * @throws \Ellipse\Router\FastRoute\Exceptions\RouteNameAlreadyMappedException
      */
-    public function register(string $name, array $methods, string $pattern, Handler $handler)
+    public function register(string $name, array $methods, string $pattern, Handler $handler): void
     {
         // Associate the name with the pattern when its not empty.
         if ($name != '') {
