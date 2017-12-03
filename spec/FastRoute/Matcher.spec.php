@@ -55,8 +55,9 @@ describe('Matcher', function () {
 
             $test = $this->matcher->match($this->request->get());
 
-            expect($test)->toBeAnInstanceOf(Match::class);
-            expect((string) $test)->toEqual('name');
+            $match = new Match('name', $handler, ['attribute']);
+
+            expect($test)->toEqual($match);
 
         });
 
